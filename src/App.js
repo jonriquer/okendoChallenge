@@ -2,10 +2,10 @@
 import React from "react";
 import "./style.scss";
 import Range from "./components/quality";
+import ButtonsRange from "./components/buttons";
+import Products from "./components/products";
 
 class App extends React.Component {
-
-
   render() {
     return (
       <div>
@@ -39,9 +39,15 @@ class App extends React.Component {
 
             <Range />
             <Range />
-
             <Range />
-
+            <Products />
+            <ButtonsRange />
+            <select>
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
           </div>
         </div>
       </div>
