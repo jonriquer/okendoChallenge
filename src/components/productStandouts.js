@@ -6,27 +6,30 @@ class Standouts extends Component {
     count: 0
   };
 
-  overLimit = () => {
-    if (this.state.count === 5) {
-      console.log("over limit")
-    }
-  }
+ 
 
   makeActive = e => {
-    // console.log(document.getElementsByClassName('productStandoutsBtn'));
+    console.log(e.target);
     if(this.state.count < 5) {
       if( e.target.parentNode.className.includes('active') ){
-        e.target.parentNode.className = 'productStandoutsBtn nonActive';
+        e.target.parentNode.className = 'productStandoutsBtn';
         this.setState({ count:  this.state.count - 1 })
       } else {
         e.target.parentNode.className = 'productStandoutsBtn active';
         this.setState({ count:  this.state.count + 1 })
       }
+      if (this.state.count === 5) {
+        document.getElementsByClassName('nonActive').className = "overLimit";
+      
+      }
     } else {
       if( e.target.parentNode.className.includes('active') ){
-        e.target.parentNode.className = 'productStandoutsBtn nonActive';
+        e.target.parentNode.className = 'productStandoutsBtn';
         this.setState({ count:  this.state.count - 1 })
       }
+      
+      
+      
     }
   };
 
@@ -39,17 +42,17 @@ class Standouts extends Component {
         <p className="zeroMargin title">Product Standouts</p>
         <p className="caption zeroMargin">Choose up to 5 that best apply (optional)</p>
         <div className="productStandouts">
-          <div className={`productStandoutsBtn nonActive`} onClick={this.makeActive}><button>Accurate TimeKeeping</button></div>
-          <div className={`productStandoutsBtn nonActive`} onClick={this.makeActive}><button>High Quality</button></div>
-          <div className={`productStandoutsBtn nonActive`} onClick={this.makeActive}><button>Durable</button></div>
-          <div className={`productStandoutsBtn nonActive`} onClick={this.makeActive}><button>Elegant</button></div>
-          <div className={`productStandoutsBtn nonActive`} onClick={this.makeActive}><button>Good Weight</button></div>
-          <div className={`productStandoutsBtn nonActive`} onClick={this.makeActive}><button>Versatile</button></div>
-          <div className={`productStandoutsBtn nonActive`} onClick={this.makeActive}><button>Looks Expensive</button></div>
-          <div className={`productStandoutsBtn nonActive`} onClick={this.makeActive}><button>Attracts Compliments</button></div>
-          <div className={`productStandoutsBtn nonActive`} onClick={this.makeActive}><button>Unique</button></div>
-          <div className={`productStandoutsBtn nonActive`} onClick={this.makeActive}><button>Great Gift</button></div>
-          <div className={`productStandoutsBtn nonActive`} onClick={this.makeActive}><button>Great Value</button></div>
+          <div className={`productStandoutsBtn`} onClick={this.makeActive}><button>Accurate TimeKeeping</button></div>
+          <div className={`productStandoutsBtn`} onClick={this.makeActive}><button>High Quality</button></div>
+          <div className={`productStandoutsBtn`} onClick={this.makeActive}><button>Durable</button></div>
+          <div className={`productStandoutsBtn`} onClick={this.makeActive}><button>Elegant</button></div>
+          <div className={`productStandoutsBtn`} onClick={this.makeActive}><button>Good Weight</button></div>
+          <div className={`productStandoutsBtn`} onClick={this.makeActive}><button>Versatile</button></div>
+          <div className={`productStandoutsBtn`} onClick={this.makeActive}><button>Looks Expensive</button></div>
+          <div className={`productStandoutsBtn`} onClick={this.makeActive}><button>Attracts Compliments</button></div>
+          <div className={`productStandoutsBtn`} onClick={this.makeActive}><button>Unique</button></div>
+          <div className={`productStandoutsBtn`} onClick={this.makeActive}><button>Great Gift</button></div>
+          <div className={`productStandoutsBtn`} onClick={this.makeActive}><button>Great Value</button></div>
         </div>
       
       </div>

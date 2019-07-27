@@ -153,6 +153,7 @@ body {
 .ratingsForm .numbers.active p {
   background:#00ca9b;
   border-color: #00ca9b;
+  color: white;
 }
 
 .ratingsForm .numbers.active p:hover {
@@ -323,11 +324,5 @@ select {
 @media (min-width: 768px) {
   .cont {
     width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .cont {
-    width: 1024px;
   }
 }
