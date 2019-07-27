@@ -16,7 +16,7 @@ class Header extends Component {
               <a className="completed" href="">
                 Review
               </a>
-              <a className="completed ratings" href="#">
+              <a className="current ratings" href="#">
                 Ratings
               </a>
               <a className="nav-links" href="#">

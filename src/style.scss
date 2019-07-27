@@ -51,6 +51,22 @@ body {
   }
   
   .completed::before {
+    content: "\2714";
+    background: #00ca9b;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(0,0,0,.3);
+    display: block;
+    height: 24px;
+    padding-left: 1px;
+    padding-top: 1px;
+    top: 0;
+    transform: translate(50%,-50%);
+    width: 24px;
+    text-align: center;
+  }
+
+  .current::before {
     content: "";
     background: #00ca9b;
     color: #fff;
@@ -58,20 +74,21 @@ body {
     box-shadow: 0 0 4px rgba(0,0,0,.3);
     display: block;
     height: 24px;
-    left: 50%;
     padding-left: 1px;
     padding-top: 1px;
     top: 0;
     transform: translate(50%,-50%);
     width: 24px;
+    text-decoration: none;
   }
   
-  .completed:hover {
+  .completed:hover, .current:hover {
     color: #272d45;
   }
   
-  .completed {
+  .completed, .current {
     font-family: Open Sans;
+    font-size: .889rem;
     text-decoration: none;
     color: #8f9097;
   }
@@ -96,6 +113,7 @@ body {
   
   .nav-links {
     font-family: Open Sans;
+    font-size: .889rem;
     text-decoration: none;
     color: #8f9097;
   }
