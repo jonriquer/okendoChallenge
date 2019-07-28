@@ -36,19 +36,8 @@ body {
 
 .nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content:space-around;
   list-style: none;
-
-  .item {
-    color: #8f9097;
-    display: flex;
-    -ms-flex: 0 0 20%;
-    flex: 0 0 20%;
-    padding-top: 18px;
-    position: relative;
-    text-align: center;
-    width: 100px;
-  }
   
   .completed::before {
     content: "\2714";
@@ -60,6 +49,7 @@ body {
     height: 24px;
     padding-left: 1px;
     padding-top: 1px;
+    margin-bottom: -7px;
     top: 0;
     transform: translate(50%,-50%);
     width: 24px;
@@ -76,6 +66,7 @@ body {
     height: 24px;
     padding-left: 1px;
     padding-top: 1px;
+    margin-bottom: -7px;
     top: 0;
     transform: translate(50%,-50%);
     width: 24px;
@@ -96,6 +87,7 @@ body {
   .ratings {
     color: #272d45;
   }
+
   .nav-links::before {
     background: #fff;
     border-radius: 50%;
@@ -106,6 +98,7 @@ body {
     left: 50%;
     padding-left: 1px;
     padding-top: 1px;
+    margin-bottom: -7px;
     top: 0;
     transform: translate(50%,-50%);
     width: 24px;
